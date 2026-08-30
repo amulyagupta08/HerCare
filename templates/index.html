@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HERCARE — AI-Powered Public Healthcare Navigation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">✦</span><span>HERCARE</span></div>
+  <nav><a href="#how">How it works</a><a href="#facilities">Facilities</a><button class="lang" onclick="toggleLang()">हिन्दी / EN</button></nav>
+</header>
 
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow">AI-POWERED PUBLIC HEALTHCARE NAVIGATION</div>
+    <h1>One platform.<br><em>Every woman.</em><br>The right care.</h1>
+    <p>Tell us what you need. HERCARE helps you understand the next step, find suitable public healthcare facilities, compare options and prepare for your visit — without diagnosing.</p>
+    <div class="trust"><span>✓</span> Guidance, not diagnosis &nbsp; • &nbsp; <span>✓</span> Public healthcare focused</div>
+  </div>
+  <div class="hero-card">
+    <div class="card-title">How can we help?</div>
+    <p class="muted">Describe your concern in your own words.</p>
+    <textarea id="concern" placeholder="Example: I have had abdominal pain since yesterday..."></textarea>
+    <div class="input-actions">
+      <button class="voice" id="voiceBtn" onclick="startVoice()">🎙 Speak</button>
+      <button class="primary" onclick="analyze()">Find my care path <span>→</span></button>
+    </div>
+    <div id="voiceStatus" class="voice-status"></div>
+  </div>
+</section>
+
+<section id="result" class="results hidden">
+  <div class="section-head"><div><div class="eyebrow">YOUR CARE PATH</div><h2>Here's what to do next</h2></div><span id="sourceBadge" class="badge">AI</span></div>
+  <div class="analysis-grid">
+    <div class="analysis-card"><span class="label">CARE CATEGORY</span><strong id="category">—</strong></div>
+    <div class="analysis-card"><span class="label">URGENCY</span><strong id="urgency">—</strong></div>
+    <div class="analysis-card wide"><span class="label">GUIDANCE</span><p id="note">—</p></div>
+  </div>
+  <div class="section-head small"><div><div class="eyebrow">SMART FACILITY MATCHING</div><h2>Recommended public facilities</h2><p class="muted">Enable location for distance-based matching.</p></div><button class="outline" onclick="useLocation()">Use my location</button></div>
+  <div id="facilities" class="facility-grid"></div>
+  <div class="prep">
+    <div><div class="eyebrow">BE PREPARED</div><h2>Visit preparation</h2><p class="muted">A simple checklist for your consultation.</p></div>
+    <div class="prep-columns"><div><h3>Bring</h3><ul id="docs"></ul></div><div><h3>Ask your doctor</h3><ul id="questions"></ul></div></div>
+  </div>
+</section>
+
+<section id="how" class="how">
+  <div class="eyebrow">HOW IT WORKS</div><h2>From concern to care, simply.</h2>
+  <div class="steps">
+    <div><b>01</b><h3>Tell Us</h3><p>Share your concern through text or voice.</p></div>
+    <div><b>02</b><h3>Understand</h3><p>AI identifies care needs and urgency without diagnosing.</p></div>
+    <div><b>03</b><h3>Find</h3><p>Match with suitable public healthcare facilities.</p></div>
+    <div><b>04</b><h3>Compare</h3><p>Review services, distance, timings and accessibility.</p></div>
+    <div><b>05</b><h3>Prepare</h3><p>Get documents and questions ready for your visit.</p></div>
+    <div><b>06</b><h3>Navigate</h3><p>Follow clear next steps to reach the right care.</p></div>
+  </div>
+</section>
+
+<section id="facilities" class="facility-section">
+  <div class="eyebrow">PUBLIC HEALTHCARE NETWORK</div><h2>Designed around real access barriers.</h2>
+  <div class="feature-row">
+    <div>📍<strong>Smart matching</strong><span>Services + distance + accessibility</span></div>
+    <div>🕐<strong>Service information</strong><span>Timings and facility status</span></div>
+    <div>🗣<strong>Multilingual</strong><span>Local-language and voice support</span></div>
+    <div>♿<strong>Accessible</strong><span>Mobility-aware recommendations</span></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="brand"><span class="logo">✦</span> HERCARE</div><p>Because finding healthcare shouldn't be confusing.</p><small>Prototype • AI-powered navigation, not medical diagnosis</small></footer>
+<script src="/static/app.js"></script>
+</body>
+</html>
