@@ -7,6 +7,10 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/style.css">
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
 </head>
 <body>
 <header>
@@ -42,6 +46,16 @@
     <div class="analysis-card wide"><span class="label">GUIDANCE</span><p id="note">—</p></div>
   </div>
   <div class="section-head small"><div><div class="eyebrow">SMART FACILITY MATCHING</div><h2>Recommended public facilities</h2><p class="muted">Enable location for distance-based matching.</p></div><button class="outline" onclick="useLocation()">Use my location</button></div>
+  <div class="map-section">
+  <div class="section-head small">
+    <div>
+      <div class="eyebrow">LOCATION MAP</div>
+      <h2>Healthcare facilities near you</h2>
+    </div>
+  </div>
+
+  <div id="phcMap"></div>
+</div>
   <div id="facilities" class="facility-grid"></div>
   <div class="prep">
     <div><div class="eyebrow">BE PREPARED</div><h2>Visit preparation</h2><p class="muted">A simple checklist for your consultation.</p></div>
@@ -73,6 +87,7 @@
 </main>
 
 <footer><div class="brand"><span class="logo">✦</span> HERCARE</div><p>Because finding healthcare shouldn't be confusing.</p><small>Prototype • AI-powered navigation, not medical diagnosis</small></footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="/static/app.js"></script>
 </body>
 </html>
