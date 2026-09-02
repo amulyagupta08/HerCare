@@ -109,9 +109,6 @@ function startVoice(){
   r.onend=()=>{if(document.getElementById("voiceStatus").textContent==="Listening…")document.getElementById("voiceStatus").textContent=""};
   r.start();
 }
-function toggleLang(){
-  alert("Prototype multilingual UI hook: voice recognition supports English (India) and the backend is ready for localized AI responses. Full Hindi UI translation can be added without changing the core architecture.");
-}
 
 let phcMap = null;
 
